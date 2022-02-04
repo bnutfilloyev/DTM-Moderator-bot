@@ -31,10 +31,10 @@ async def checker(call: types.CallbackQuery):
                                           channel=channel)
         channel = await bot.get_chat(channel)
         if status:
-            result += f"<b>{channel.title}</b> kanaliga obuna bo'lgansiz!\n\n"
+            result += f"<b>{channel.title}</b>'ga obuna bo'lgansiz!\n\n"
         else:
             invite_link = await channel.export_invite_link()
-            result += (f"<b>{channel.title}</b> kanaliga obuna bo'lmagansiz. "
+            result += (f"<b>{channel.title}</b>'ga obuna bo'lmagansiz. "
                        f"<a href='{invite_link}'>Obuna bo'ling</a>\n\n")
 
     await call.message.answer(result, disable_web_page_preview=True)
