@@ -7,7 +7,7 @@ from states.States import Form
 from utils.db_api.mongo import user_db
 
 
-@dp.message_handler(commands=['add_result'])
+@dp.message_handler(commands=['add_result'], state='*')
 async def add_result(msg: types.Message):
     await msg.answer(text['result_id'])
     await Form.getIdResult.set()

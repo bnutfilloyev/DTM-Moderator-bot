@@ -7,7 +7,7 @@ from states.States import Form
 from utils.db_api.mongo import user_db
 
 
-@dp.message_handler(commands=['imtihon'])
+@dp.message_handler(commands=['imtihon'], state="*")
 async def imtihon(message: types.Message):
     await message.answer(text['get_name'])
     await Form.getName.set()

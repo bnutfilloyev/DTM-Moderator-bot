@@ -49,3 +49,8 @@ text = {
 
     'error': "Sizning natijangiz hali chiqmagan."
 }
+
+help_text = ("Komandalar ro'yxati: ",
+        "/start - Botni qayta ishga tushirish",
+        "/help - Yordam",
+        "/imtihon - Botdan ro'yxatdan o'tish")

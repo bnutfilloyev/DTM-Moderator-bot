@@ -8,7 +8,7 @@ from loader import bot, dp
 from utils.misc import subscription
 
 
-@dp.message_handler(commands=['start'])
+@dp.message_handler(commands=['start'], state="*")
 async def show_channels(message: types.Message):
     channels_format = str()
     for channel in CHANNELS:
